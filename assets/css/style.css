@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(217deg, hsl(353, 100%, 38%), rgba(255,0,0,0) 70.71%),
+  linear-gradient(127deg, #6e6e6e, rgba(0,255,0,0) 70.71%),
+  linear-gradient(336deg, #FDB813 , rgba(0,0,255,0) 70.71%);
+}
+.container{
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  animation: transitionIn 0.35s;
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background-color: hsl(353, 100%, 38%);
+}
+.login-form form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  position: relative;
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+position: relative;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+position: relative;
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details  .input-box i{
+    position: absolute;
+    top: 70%;
+    transform: translateY(-55%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+ .input-box input:is(:focus, :valid) ~ i{
+    color: hsl(353, 100%, 38%);
+}
+
+.input-box i.icon{
+display: none;
+}
+ .input-box i.showHidePw{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.user-details .input-box .file{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: hsl(353, 100%, 38%);
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: hsl(353, 100%, 38%);
+   border-color: hsl(353, 100%, 38%);
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+
+   margin: 15px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border: none;
+   color: #fff;
+   font-size: 17px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   border-radius: 6px;
+   background-color: hsl(353, 100%, 38%);
+   cursor: pointer;
+   transition: all 0.3s ease;;
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background-color: hsl(0, 0%, 33%);
+  }
+
+.login-form .login1{
+
+    text-align: center;
+}
+.login-form .back-home{
+  font-size: 15px;
+  margin-top: 5px;
+  text-align: center;
+  color: var(--eerie-black);
+}
+
+.login-form .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.login-form  a.text{
+    color: hsl(353, 100%, 38%);
+    text-decoration: none;
+}
+  a:hover{
+    text-decoration: underline;
+}
+
+.login-form .checkbox-text{
+
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0%;
+}
+.checkbox-text .checkbox-content{
+    align-items: center;
+}
+.checkbox-content input{
+
+    accent-color: hsl(353, 100%, 38%);
+}
+::selection {
+    background: lightblue;
+    color: #ff0000;
+  }
+@keyframes transitionIn{
+    from{
+      opacity: 0;
+      transform: rotateX(-30deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .login-form form .user-details{
+    max-height: 600px;
+
+  }
+  }
+  @media(max-width: 459px){
+  .container .login-form .category{
+    flex-direction: column;
+  }
+}
